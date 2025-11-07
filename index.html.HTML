@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Cumpleaños</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans&display=swap');
+
+        body {
+            margin: 0;
+            background: linear-gradient(145deg, #0e0e0e, #1b1b1b);
+            color: #f5f5f5;
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .invitacion {
+            background: rgba(25, 25, 25, 0.95);
+            border: 1.5px solid #b9973e;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(185, 151, 62, 0.25);
+            padding: 50px 70px;
+            text-align: center;
+            max-width: 550px;
+            animation: aparecer 1.5s ease;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5em;
+            color: #d4af37;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            color: #e8e3d5;
+            margin-bottom: 25px;
+        }
+
+        .linea {
+            width: 70px;
+            height: 2px;
+            background: #b9973e;
+            margin: 20px auto;
+        }
+
+        .detalle {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #ccc;
+            margin: 25px 0;
+        }
+
+        .fecha {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .firma {
+            margin-top: 40px;
+            font-style: italic;
+            color: #a9a9a9;
+        }
+
+        .botones {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .boton {
+            background: transparent;
+            border: 1.5px solid #b9973e;
+            color: #d4af37;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1em;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .boton:hover {
+            background: #b9973e;
+            color: #1b1b1b;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .decoracion {
+            width: 80px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .invitacion {
+                padding: 35px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitacion">
+        
+        <h1>Invitación Especial</h1>
+        <div class="linea"></div>
+        <h2>Celebración de Cumpleaños de <strong>Raquel Sanchez Hernandez</strong></h2>
+
+        <div class="detalle">
+            Estás cordialmente invitado a una comida <br><br>
+            📅 <span class="fecha">Domingo 16 de Noviembre, 2025</span><br>
+            🕗 2:00 PM<br>
+            📍 lugar conocido como “Rancho el sapote”,Mexico-Chiapas
+        </div>
+
+        <div class="botones">
+            <button class="boton" onclick="confirmarAsistencia()">Confirmar Asistencia</button>
+            <button class="boton" onclick="verUbicacion()">Ver Ubicación</button>
+        </div>
+
+        <p class="firma">Con cariño,<br>Raquel ✨</p>
+    </div>
+
+    <script>
+        function confirmarAsistencia() {
+            alert("¡Gracias por confirmar tu asistencia! 🥂");
+        }
+
+        function verUbicacion() {
+            window.open("https://maps.app.goo.gl/FfPxefUXtND8Qtbd8", "_blank");
+        }
+    </script>
+</body>
+</html>
